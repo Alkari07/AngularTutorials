@@ -4,11 +4,13 @@ import {FormsModule} from '@angular/forms'; //<-- NgModel lives here
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent //Angular CLI auto declared the component in App module when the component was generated
+    HeroesComponent,
+    HeroDetailComponent //Angular CLI auto declared the component in App module when the component was generated
     //Every component must be declared in exactly one NgModule
   ],
   imports: [
