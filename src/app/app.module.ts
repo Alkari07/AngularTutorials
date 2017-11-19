@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {InMemoryDataService} from './in-memory-data.service';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent //Angular CLI auto declared the component in App module when the component was generated
+    DashboardComponent,
+    HeroSearchComponent //Angular CLI auto declared the component in App module when the component was generated
     //Every component must be declared in exactly one NgModule
   ],
   imports: [
