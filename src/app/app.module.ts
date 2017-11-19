@@ -10,6 +10,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryDataService} from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     //also need to add it to the imports array here so the external module object gets imported
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      //for root takes an inmemory data service that primes the in-memory database
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
