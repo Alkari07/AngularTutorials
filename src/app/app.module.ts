@@ -9,13 +9,15 @@ import {HeroService} from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent //Angular CLI auto declared the component in App module when the component was generated
+    MessagesComponent,
+    DashboardComponent //Angular CLI auto declared the component in App module when the component was generated
     //Every component must be declared in exactly one NgModule
   ],
   imports: [

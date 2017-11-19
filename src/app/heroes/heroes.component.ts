@@ -12,7 +12,6 @@ import {HeroService} from '../hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  selectedHero: Hero;
   heroes: Hero[];
 
   //when the constructor is called by Angular, a HeroService instance is injected
@@ -20,11 +19,6 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
-  }
-
-  onSelect(hero: Hero): void {
-    console.info("hero clicked" + hero.name);
-    this.selectedHero = hero;
   }
 
   getHeroes() : void {

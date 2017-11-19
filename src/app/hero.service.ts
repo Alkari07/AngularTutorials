@@ -15,4 +15,11 @@ export class HeroService {
     return of (HEROES);
   }
 
+  getHero(id : number): Observable<Hero> {
+    //Todo: send the message after featching the hero
+    //backticks ` define a javascript template literal
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of (HEROES.find(hero=>hero.id===id));
+  }
+
 }
